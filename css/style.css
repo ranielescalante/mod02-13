@@ -15,14 +15,14 @@
 
 
 header	{
-	float: left;
+	/*float: left;*/
 	padding: 15px;
 	position: fixed;
 	left: 0;
 	width: 20%;
 	text-align: center;
 	height: 100%;
-	background-color: #484848;
+	background-color: #000;
 
 }
 
@@ -30,8 +30,9 @@ div.avatar {
 	background-image: url(../img/image1.jpg);
 	height: 200px;
 	margin-bottom: 30px; 
-	border-radius: 50px;
-
+	margin-top: 10;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 /*Navigation*/
@@ -39,19 +40,27 @@ nav > ul > li {
 	text-align: center;
 	font-size: 1em;
 	height: 50px;
-	background-color: #9e9e9e; /*light grey*/
+	background-color: #cfcfcf; /*light grey*/
 	list-style: none;
 	margin-top: 3px;
 	padding: 5px;
 	border-radius: 20px;
 	font-family: 'Bungee', cursive;
+	float: left;
+	width: 100%;
+	text-shadow: 4px 4px 10px #212121;
+}
+
+nav > ul > li:hover {
+	background-color: #9e9e9e;
+	color: #fff;
 }
 
 nav> ul > li> a {
 	text-decoration: none;
-	color: #000;
-	padding: 5px 65px;
-
+	color: #fff;
+	display: inline-block;
+	padding: 0px 45px;
 }
 
 main {
@@ -61,18 +70,37 @@ main {
 
 }
 
+/*Toggle Icon JS*/
+#toggleIcon, 
+#toggleIcon1 {
+	background-color: #cfcfcf;
+	position: fixed;
+	top: 0;
+	left: 20%;
+	padding: 15px;
+	z-index: 1;
+	color: white;
+	font-size: 2em; 
+	border: 2px solid #000;
+}
+
+#toggleIcon1 {
+	left:0;
+}
+
 .headerhome {
 	border: 2px solid #fff;
 	padding: 125px;
-	width: 50%;
+	width: 70%;
 	margin: 0 auto;
 	text-align: center;
-	position: absolute;
-	top: 25%;
-	left: 35%;
+	position: relative;
+	top: 20%;
+	background-color: rgba(0, 0, 0, 0.7)
 	
 }
 
+/*Body*/
 div.wrapper{
 	width: 100%;
 	height: 100%;
@@ -83,51 +111,68 @@ h2 {
 	font-family: 'Bungee', cursive;
 }
 
-div#home {
-	height: 800px;
-	padding: 20px;
-	background-color: skyblue;
-	color: white;
-	border: 2px solid white;
-	text-shadow: 2px 2px 5px #212121;
-	background-image: url(../img/image2.jpg);
-}
-
 div.headerhome > p {
 	font-family: 'Roboto', sans-serif;
 }
 
+div#home {
+	height: 750px;
+	padding: 20px;
+	background-color: skyblue;
+	color: white;
+	border: 2px solid white;
+	text-shadow: 2px 2px 5px red;
+	position: relative;
+	background-image: url(../img/image2.jpg);
+
+}
+
 div#about {
-	height: 800px;
+	height: 750px;
 	padding: 20px;
 	background-color: green;
 	background-image: url(../img/image3.jpg);
+	
 }
 
 div#services {
-	height: 800px;
+	height: 750px;
 	padding: 20px;
 	border: 2px solid white;
-	text-shadow: 2px 2px 5px #212121;
+	text-shadow: 2px 2px 5px red;
 	color: white;
 	background-color: violet;
 	background-image: url(../img/image4.jpg);
+	
 }
 
 div#project {
-	height: 800px;
+	height: 750px;
 	padding: 20px;
 	background-color: blue;
 	background-image: url(../img/image5.jpg);
+
 }
 
 div#gallery {
-	height: 800px;
+	height: 750px;
 	padding: 20px;
 	border: 2px solid white;
 	background-color: orange;
-
+	text-shadow: 2px 2px 5px red;
 	color: white;
 	background-image: url(../img/image6.jpg);
+	
 }
+
+div#home,
+div#about,
+div#services,
+div#project,
+div#gallery {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
 
